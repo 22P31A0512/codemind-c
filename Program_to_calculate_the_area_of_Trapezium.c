@@ -5,5 +5,4 @@ int main()
     scanf("%f%f%f",&a,&b,&h);
     x=0.5*(a+b)*h;
     printf("%0.4f",x);
-
 }
