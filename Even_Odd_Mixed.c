@@ -1,24 +1,29 @@
 #include<stdio.h>
-void check(int n)
+#include<math.h>
+int sum_sq(int n)
 {
-    int r,c=0,d=0;
-    while(n)
-    {
-        r=n%10;
-        if(r%2==0)
-        c++;
-        d++;
-        n/=10;
-    }
-    if(c==d)
-    printf("Even");
-    else if (c<d && c!=0)
-    printf("Mixed");
-    else printf("Odd");
+    scanf("%d",&n);
+    int i,ss=0;
+    for(i=1;i<=n;i++)
+    ss+=i*i;
+    return ss;
+}
+int sq_sum(int n)
+{
+    scanf("%d",&n);
+    int j,sqs,sq=0;
+    for(j=1;j<=n;j++)
+    sq+=j;
+    sqs=sq*sq;
+    return sqs;
 }
 int main()
 {
     int n;
     scanf("%d",&n);
-    check(n);
+    int k,l,diff;
+    k=sum_sq(n);
+    l=sq_sum(n);
+    diff=abs(k-l);
+    printf("%d",diff);
 }
